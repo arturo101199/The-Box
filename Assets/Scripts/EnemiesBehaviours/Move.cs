@@ -2,20 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BurstMovement : MonoBehaviour
+public enum Direction { RIGHT, LEFT, UP, DOWN}
+
+public class Move : MonoBehaviour
 {
     [SerializeField] Direction dir = 0;
     [SerializeField] float speed = 10f;
 
-    const float INIT_ANIM_TIME = 2f;
+    Vector2 moveDir;
 
-    Vector2 moveDir = Vector2.zero;
-    float timer = 0f;
+    public void SetInfo(Direction dir, float speed)
+    {
+        this.dir = dir;
+        this.speed = speed;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        timer = 0f;
         switch (dir)
         {
             case Direction.RIGHT:
@@ -33,11 +37,8 @@ public class BurstMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
-        if (timer >= INIT_ANIM_TIME)
-            transform.Translate(moveDir * speed * Time.deltaTime, Space.World);
-        else timer += Time.deltaTime;
+        transform.Translate(moveDir * speed * Time.deltaTime);
     }
 }
