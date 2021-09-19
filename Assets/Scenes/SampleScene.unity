@@ -371,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &53983718
 Transform:
   m_ObjectHideFlags: 0
@@ -409,8 +409,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f4e2db8c846d014782f486c914d68f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  events: []
-  wallsController: {fileID: 0}
+  events:
+  - timeDelay: 1
+    infoString: WallEvent
+  - timeDelay: 2
+    infoString: SpawnEvent
+  - timeDelay: 1
+    infoString: SpawnEvent
+  - timeDelay: 0.5
+    infoString: SpawnEvent
+  wallsController: {fileID: 1014184344}
 --- !u!1 &60532134
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,8 +842,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   events:
-  - timeDelay: 3
+  - timeDelay: 1
     infoString: WallEvent
+  - timeDelay: 2
+    infoString: SpawnEvent
+  - timeDelay: 1
+    infoString: SpawnEvent
+  - timeDelay: 0.5
+    infoString: SpawnEvent
   wallsController: {fileID: 1014184344}
 --- !u!4 &421853427
 Transform:
@@ -2588,7 +2602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3183547111076160058, guid: 3cb7f3ba81d37994480e76d038c20f0a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3183547111076160061, guid: 3cb7f3ba81d37994480e76d038c20f0a, type: 3}
       propertyPath: shadow

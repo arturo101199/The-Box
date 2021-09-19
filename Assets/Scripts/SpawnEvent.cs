@@ -17,6 +17,7 @@ public class SpawnEvent : GameEvent
     public override void doEvent()
     {
         GameObject obj = ObjectPooler.GetInstance().SpawnObject(pool, spawnPosition, Quaternion.identity);
-        obj.GetComponent<IEnemySpawn>().SetInfo(arguments);
+        IEnemySpawn enemy = obj.GetComponent<IEnemySpawn>();
+        enemy.SetInfo(arguments);
     }
 }

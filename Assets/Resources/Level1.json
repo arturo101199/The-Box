@@ -1,0 +1,54 @@
+{
+  "events": [
+    {
+      "type": "Wall",
+      "arguments": {
+        "direction": 1,
+        "open": 1,
+        "timeDelay": 1
+      }
+    },
+    {
+      "type": "Spawn",
+      "position": [
+        -10,
+        0,
+        0
+      ],
+      "object": "RedSquare",
+      "parameters": [
+        0,
+        5
+      ],
+      "timeDelay": 2
+    },
+    {
+      "type": "Spawn",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "object": "SweepBar",
+      "parameters": [
+        0,
+        5
+      ],
+      "timeDelay": 1
+    },
+    {
+      "type": "Spawn",
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "object": "BurstSquare",
+      "parameters": [
+        0,
+        5
+      ],
+      "timeDelay": 0.5
+    }
+  ]
+}
